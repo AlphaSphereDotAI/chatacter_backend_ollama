@@ -21,4 +21,6 @@ EXPOSE 11434
 # Ensure the ollama service is running
 HEALTHCHECK --interval=30s --timeout=10s --retries=3 CMD curl -f http://localhost:11434/health || exit 1
 
-CMD [ "$(which ollama)", "serve" ]
+ENTRYPOINT ["/bin/ollama"]
+
+CMD [ "serve" ]
