@@ -1,6 +1,8 @@
-FROM docker.io/ollama/ollama
+FROM docker.io/ollama/ollama:latest
 
 SHELL [ "/bin/bash", "-c" ]
+
+LABEL org.opencontainers.image.description="Ollama container with a pre-pulled model (hf.co/MaziyarPanahi/Meraj-Mini-GGUF:IQ1_S)"
 
 RUN set -eux; \
     addgroup --system chatacter \
