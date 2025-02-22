@@ -2,7 +2,8 @@ FROM docker.io/ollama/ollama:latest
 
 SHELL [ "/bin/bash", "-c" ]
 
-LABEL org.opencontainers.image.description="Ollama container with a pre-pulled model (hf.co/MaziyarPanahi/Meraj-Mini-GGUF:IQ1_S)"
+LABEL org.opencontainers.image.description="Ollama container with a pre-pulled model (hf.co/MaziyarPanahi/Meraj-Mini-GGUF:IQ1_S)" \
+    org.opencontainers.image.source="https://github.com/AlphaSphereDotAI/chatacter_backend_ollama"
 
 RUN set -eux; \
     addgroup --system chatacter \
